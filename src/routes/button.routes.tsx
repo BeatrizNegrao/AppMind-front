@@ -1,7 +1,8 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ListProducts from '../pages/listProducts'
-import CustomTabBar from '../components/CustomTabBar';
+import RegisterProducts from '../pages/register';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -13,9 +14,14 @@ export default function BottomRoutes() {
             }}
         >
             <Tab.Screen
-                name="ListProducts"
+                name="Lista de produtos"
                 component={ListProducts}
             />
+            <Tab.Screen
+                name="Registrar produtos"
+                component={RegisterProducts}
+            />
+            
         </Tab.Navigator>
     );
 }

@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../pages/login";
 import Cadastro from "../pages/cadastro";
 import BottomRoutes from "./button.routes";
+import RegisterProducts from "../pages/register";
 
 
 export default function Routes() { //Pilha de navegação
@@ -30,6 +31,7 @@ export default function Routes() { //Pilha de navegação
                 name="Cadastro"
                 component={Cadastro}
             />
+
         </Stack.Navigator>
     )
 }

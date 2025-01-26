@@ -27,14 +27,13 @@ export default function Login() {
         try {
 
             if (!name || !email || !password) {
-                Alert.alert('Atenção', 'Informe os campos obrigatórios!')
+                Alert.alert('Atenção', 'Preencha todos os campos!')
                 setLoading(false);
                 return;
             }
 
             navigation.navigate('BottomRoutes'); 
-            console.log('Logado com sucesso!')
-           
+            
         } catch (error) {
             console.log(error)
         } finally {
