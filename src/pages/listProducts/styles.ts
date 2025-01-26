@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: '#fff',
-    borderRadius: 11,
+    borderRadius: 15,
     marginBottom: 15,
     overflow: 'hidden',
     borderWidth: 1,
@@ -29,6 +29,11 @@ export const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  image: {
+    width: '100%',
+    height: 130,
+    resizeMode: 'contain',
   },
   imageText: {
     color: '#777',
@@ -55,7 +60,9 @@ export const styles = StyleSheet.create({
   productDescription: {
     fontSize: 14,
     color: '#555',
-    marginBottom: 5
+    marginBottom: 15,
+    lineHeight: 20
+
   },
   stockText: {
     fontSize: 14,

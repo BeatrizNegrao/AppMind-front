@@ -3,14 +3,10 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
-  Alert,
-  StyleSheet,
-  Image,
+  Alert
 } from "react-native";
 import { styles } from "./styles";
 import { Button } from "../../components/Button";
-import { Input } from "../../components/input";
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 
@@ -60,6 +56,12 @@ export default function RegisterProducts() {
         onChangeText={setPrice}
         keyboardType="numeric"
       />
+       <TextInput
+              style={styles.input}
+              placeholder="URL da imagem"
+              value={image}
+              onChangeText={setImage}
+            />
       <View style={styles.boxButton}>
         <Button
           text="Registrar"

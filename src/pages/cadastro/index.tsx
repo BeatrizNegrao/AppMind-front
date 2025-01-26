@@ -24,7 +24,7 @@ export default function Cadastro() {
     const [showPassword, setShowPassword] = useState(true)
     const [loading, setLoading] = useState(false)
 
-    async function handleCadastro() {
+    async function getCadastro() {
         setLoading(true)
 
         try {
@@ -43,10 +43,6 @@ export default function Cadastro() {
         } finally {
             setLoading(false)
         }
-    }
-
-    function handleGoToLogin() {
-        navigation.navigate('Login')
     }
 
     return (
@@ -90,10 +86,10 @@ export default function Cadastro() {
                 <Button
                     text="Cadastrar"
                     loading={loading}
-                    onPress={handleCadastro}
+                    onPress={getCadastro}
                 />
             </View>
-            <TouchableOpacity onPress={handleGoToLogin}>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text style={style.TextBotton}>Já possui uma conta? Faça seu login!</Text>
             </TouchableOpacity>
         </View>

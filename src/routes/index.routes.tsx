@@ -1,10 +1,9 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../pages/login";
-import Cadastro from "../pages/cadastro";
 import BottomRoutes from "./button.routes";
-import RegisterProducts from "../pages/register";
-
+import EditProducts from "../pages/editProducts";
+import Cadastro from "../pages/cadastro";
 
 export default function Routes() { //Pilha de navegação
     const Stack = createStackNavigator()
@@ -27,11 +26,14 @@ export default function Routes() { //Pilha de navegação
                 name="BottomRoutes"
                 component={BottomRoutes}
             />
-             <Stack.Screen
+            <Stack.Screen
                 name="Cadastro"
                 component={Cadastro}
             />
-
+            <Stack.Screen
+                name="EditProducts"
+                component={EditProducts}
+            />
         </Stack.Navigator>
     )
 }

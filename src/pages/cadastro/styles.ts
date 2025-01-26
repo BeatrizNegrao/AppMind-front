@@ -67,13 +67,9 @@ export const style = StyleSheet.create({
         shadowRadius: 4.65,
         elevation: 7
     },
-    textButton: {
-        fontWeight: 'bold',
-        fontSize: 16
-    },
     TextBotton: {
         fontSize: 14,
         color: 'black', 
         marginBottom: 45
-    },
+    }
 });
