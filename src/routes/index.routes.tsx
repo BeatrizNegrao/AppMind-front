@@ -5,7 +5,7 @@ import BottomRoutes from "./button.routes";
 import EditProducts from "../pages/editProducts";
 import Cadastro from "../pages/cadastro";
 
-export default function Routes() { //Pilha de navegação
+export default function Routes() { //Rotas de navegação
     const Stack = createStackNavigator()
 
     return (
@@ -37,4 +37,3 @@ export default function Routes() { //Pilha de navegação
         </Stack.Navigator>
     )
 }
-

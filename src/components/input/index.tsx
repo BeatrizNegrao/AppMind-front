@@ -16,7 +16,7 @@ export const Input = forwardRef((Props: Props, ref: LegacyRef<TextInput> | null)
             <View style={style.boxInput}>
                 <TextInput
                     style={style.input}
-                    {...rest} // Permite a passagem de todas as propriedades do TextInput (ex.: secureTextEntry, placeholder)
+                    {...rest} // Permite a passagem de todas as propriedades do TextInput 
                 />
             </View>
         </Fragment>

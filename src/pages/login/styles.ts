@@ -11,7 +11,7 @@ export const style = StyleSheet.create({
         flex: 1,
         width: '100%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     boxMid: {
         flex: 2, 
@@ -23,7 +23,7 @@ export const style = StyleSheet.create({
         flex: 1,
         width: '100%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     logo: {
         width: 80,
@@ -33,7 +33,7 @@ export const style = StyleSheet.create({
     text: {
         fontWeight: 'bold',
         marginTop: 40,
-        fontSize: 18
+        fontSize: 18,
     },
     boxInput: {
         width: '100%',
@@ -69,7 +69,7 @@ export const style = StyleSheet.create({
     },
     textButton: {
         fontWeight: 'bold',
-        fontSize: 16
+        fontSize: 16,
     },
     TextBotton: {
         fontSize: 14,

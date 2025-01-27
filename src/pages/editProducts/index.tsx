@@ -18,10 +18,10 @@ export default function EditProducts() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
+  const [amount, setAmount] = useState("");
 
   function getRegisterProducts() {
-    if (!name || !description || !price || !image) {
+    if (!name || !description || !price || !amount) {
       Alert.alert("Atenção", "Preencha todos os campos!");
       return;
     }
@@ -30,7 +30,6 @@ export default function EditProducts() {
     setName("");
     setDescription("");
     setPrice("");
-    setImage("");
   }
 
 
@@ -59,11 +58,12 @@ export default function EditProducts() {
       />
       <TextInput
         style={styles.input}
-        placeholder="URL da imagem"
-        value={image}
-        onChangeText={setImage}
-
+        placeholder="Quantidade de atual"
+        value={amount}
+        onChangeText={setAmount}
+        keyboardType="numeric"
       />
+
       <View style={styles.boxButton}>
         <Button
           text="Editar"

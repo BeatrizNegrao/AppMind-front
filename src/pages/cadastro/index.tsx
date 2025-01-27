@@ -12,6 +12,7 @@ import Logo from '../../img/cadastro.png'
 import { Input } from "../../components/input"
 import { Button } from "../../components/Button";
 import { useNavigation, NavigationProp } from '@react-navigation/native';
+import api from '../../services/UserService';
 
 export default function Cadastro() {
 
@@ -25,23 +26,36 @@ export default function Cadastro() {
     const [loading, setLoading] = useState(false)
 
     async function getCadastro() {
-        setLoading(true)
-
+        setLoading(true);
         try {
             if (!name || !email || !password || !confirmPassword) {
-                setTimeout(() => Alert.alert('Atenção', 'Preencha todos os campos!'), 0)
-                setLoading(false);
+                Alert.alert('Atenção', 'Preencha todos os campos!');
                 return;
             }
 
-            navigation.navigate("BottomRoutes")
-            console.log('Cadastro realizado com sucesso!')
+            if (password !== confirmPassword) {
+                Alert.alert('Atenção', 'As senhas não coincidem!');
+                return;
+            }
 
-        } catch (error) {
-            console.log(error)
+            const response = await api.post('/users', {
+                nome: name,
+                email,
+                senha: password
+            });
 
+            if (response.status === 201) {
+                Alert.alert('Sucesso', 'Cadastro realizado com sucesso!');
+                navigation.navigate('Login');
+            }
+        } catch (error: any) {
+            if (error.response) {
+                Alert.alert('Erro', error.response.data.error || 'Erro ao realizar cadastro');
+            } else {
+                Alert.alert('Erro', 'Erro ao conectar com o servidor');
+            }
         } finally {
-            setLoading(false)
+            setLoading(false);
         }
     }
 
